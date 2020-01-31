@@ -1,0 +1,68 @@
+.first-screen {
+  padding-bottom: 96px;
+  background: url("../img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: 43% 10%;
+  @include media($screen-tablet) {
+    background: url("../img/bg.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &__logo {
+    margin-bottom: 70px;
+    @include media($screen-tablet) {
+      margin-bottom: 88px;
+    }
+  }
+  &__title {
+    font-size: 26px;
+    line-height: 40px;
+    color: rgba(255, 228, 17, 0.92);
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.75);
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    font-family: $title-font;
+    span {
+      display: block;
+    }
+    @include media($screen-tablet){
+      text-shadow: 6px 4px 2px rgba(0, 0, 0, 0.75);
+      font-size: 40px;
+      line-height: 40px;
+      span {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    @include media {
+      font-size: 50px;
+      line-height: 40px;
+      span {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__text {
+    @include text($H240, 600, $N0);
+    margin-bottom: 20px;
+    text-align: center;
+    @include media($screen-tablet) {
+      @include text($H300, 600, $N0);
+      margin-bottom: 35px;
+      text-align: left;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    @include flex-col(center, center);
+    @include media($screen-tablet) {
+      @include flex-col;
+    }
+  }
+  .button {
+    width: 100%;
+    @include media($screen-tablet) {
+      width: initial;
+    }
+  }
+}

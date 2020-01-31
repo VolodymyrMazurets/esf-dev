@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+}
+html,
+body {
+  font-size: 100%;
+  background-color: #232222;
+  @include media($screen-retina) {
+    font-size: 150%;
+  }
+}
+body {
+  font-family: $main-font;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  @include media($screen-retina) {
+    max-width: 1600px !important;
+  }
+}
+.button {
+  padding: 0 16px;
+  height: 60px;
+  @include text($H80, 700, $N0);
+  font-family: $main-font;
+  @include flex-row(center, center);
+  background-color: $G10;
+  border-radius: 10px;
+  text-transform: uppercase;
+  @include transition;
+  &:hover {
+    text-decoration: none;
+    background-color: lighten(#00e067, 5%);
+    color: $N0;
+  }
+  &:active {
+    background-color: darken(#00e067, 5%);
+  }
+  &.green {
+    height: 45px;
+    background-color: $G10;
+    @include text($H50, 700, $N0);
+    &:hover {
+      text-decoration: none;
+      background-color: lighten(#00e067, 5%);
+      color: $N0;
+    }
+    &:active {
+      background-color: darken(#00e067, 5%);
+    }
+  }
+}
+.link {
+  @include text($H80, 400, $Y10);
+  font-family: $main-font;
+  @include transition;
+  &:hover {
+    text-decoration: none;
+    color: lighten(#ff8a00, 10%);
+  }
+  &:active {
+    color: darken(#ff8a00, 5%);
+  }
+}
+.modal-window {
+  padding: 34px 40px 45px;
+  background: #1d1e1f;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.09);
+  @include flex-col(flex-start, center);
+  @include media($screen-tablet) {
+    max-width: 450px!important;
+  }
+  &__title {
+    @include text($H240, 400, $N0);
+    margin-bottom: 20px;
+    text-align: center;
+    img {
+      margin-left: 10px;
+    }
+    @include media($screen-tablet) {
+      font-size: $H300;
+    }
+  }
+  &__text {
+    width: 90%;
+    @include text($H30, 400, $N0);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,154 @@
+.main {
+  position: relative;
+  padding: 75px 0 80px;
+  overflow: hidden;
+  &__lines {
+    position: absolute;
+    top: -155px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+  &__piramides {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+  &__title {
+    @include text($H360, 400, $N0);
+    text-align: center;
+  }
+  &__card {
+    @include flex-col;
+  }
+  &__card-img {
+    margin-bottom: 13px;
+    width: 100%;
+  }
+  &__card-title {
+    @include text($H220, 500, $N0);
+    margin-bottom: 10px;
+  }
+  &__card-text {
+    @include text($H30, 300, $N0);
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    @include text($H240, 400, $N0);
+    margin-bottom: 24px;
+    @include media($screen-tablet) {
+      @include text($H360, 400, $N0);
+    }
+  }
+  &__row {
+    @include flex-col(flex-start, center);
+    margin-bottom: 60px;
+    @include media($screen-tablet) {
+      @include flex-row(flex-start, center);
+      margin-bottom: 100px;
+    }
+    @include media {
+      margin-bottom: 266px;
+    }
+  }
+  &__text {
+    @include text($H30, 400, $N0);
+    margin-bottom: 60px;
+    line-height: 1.6;
+    @include media($screen-tablet) {
+      width: 60%;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 16px;
+    @include media($screen-tablet) {
+      margin-right: 30px;
+      width: 300px;
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    @include text($H50, 500, $N0);
+    text-decoration: underline;
+    @include transition;
+    text-transform: uppercase;
+    &:hover {
+      color: darken($color: #fff, $amount: 10%);
+    }
+    &:active {
+      color: darken($color: #fff, $amount: 20%);
+    }
+  }
+  &__bottom-title {
+    @include text($H240, 600, $N10);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @include media {
+      @include text($H360, 600, $N10);
+    }
+  }
+  &__bottom-text {
+    @include text($H200, 700, $N10);
+    margin-bottom: 0;
+    @include media {
+      @include text($H240, 700, $N10);
+    }
+  }
+  &__slider-row {
+    @include flex-col(flex-start, center);
+    margin-bottom: 18px;
+    @include media($screen-tablet) {
+      @include flex-row(flex-start, center);
+    }
+  }
+  &__slider {
+    @include flex-row(flex-start, center);
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    @include media($screen-tablet) {
+      margin-right: 15px;
+      flex-wrap: nowrap;
+      margin-bottom: 0;
+    }
+  }
+  &__slider-item {
+    margin-bottom: 10px;
+    flex-basis: 48%;
+    max-width: 48%;
+    margin-right: 10px;
+    img {
+      width: 100%;
+    }
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+    @include media($screen-tablet) {
+      margin-right: 10px;
+      margin-bottom: 0;
+      &:nth-child(2n + 2) {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__dots {
+    @include flex-row(flex-start, center);
+  }
+  &__dot {
+    @include size(13px, true);
+    background-color: $Y10;
+    margin-right: 4px;
+    &.active {
+      background-color: #585858;
+    }
+  }
+}

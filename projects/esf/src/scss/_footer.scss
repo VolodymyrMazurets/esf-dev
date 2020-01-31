@@ -1,0 +1,17 @@
+.footer {
+  background-color: $N100;
+  padding-bottom: 32px;
+  @include media($screen-tablet) {
+    padding-bottom: 0;
+  }
+  &__logo {
+    margin-bottom: 16px;
+    @include media($screen-tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__name {
+    @include text($H80, 400, $N0);
+    margin-right: 2px;
+  }
+}
