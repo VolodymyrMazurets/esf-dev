@@ -69,19 +69,16 @@ $H9: px_to_rem(9px);
 
 // FONTS
 
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
-@font-face {
-  font-family: "Gooseberry Juice";
-  src:
-    url("../assets/fonts/Gooseberry\ Juice.woff.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
 $main-font: "Work Sans", sans-serif;
+$btn-font: 'Montserrat', sans-serif;
 $sec-font: "Roboto", sans-serif;
-$title-font: "Gooseberry Juice", sans-serif;
+$title-font: 'Rubik', sans-serif;
+$subtitle-font: 'Roboto Mono', monospace;;
 
 // padding left-right
 $px: 3%;

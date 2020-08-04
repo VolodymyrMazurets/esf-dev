@@ -1,17 +1,55 @@
 .footer {
-  background-color: $N100;
-  padding-bottom: 32px;
-  @include media($screen-tablet) {
-    padding-bottom: 0;
+  padding: 60px 0 0;
+  &__gradient {
+    background: linear-gradient(
+      359.89deg,
+      #ff8a00 27.3%,
+      rgba(27, 31, 61, 0) 94.36%
+    );
   }
-  &__logo {
-    margin-bottom: 16px;
-    @include media($screen-tablet) {
-      margin-bottom: 0;
+  &__title {
+    font-family: $title-font;
+    @include text($H220, 700, $N100);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__text {
+    @include text($H60, 500, #e9eaf3);
+    margin-bottom: 20px;
+    line-height: 21px;
+    &._mb {
+      margin-bottom: 40px;
     }
   }
-  &__name {
-    @include text($H80, 400, $N0);
-    margin-right: 2px;
+  &__right {
+    padding: 150px 0 61px;
+    @include flex-col(flex-start, flex-end);
+    width: 100%;
+  }
+  &__wrapper {
+    @include flex-col();
+  }
+  &__help {
+    font-family: $title-font;
+    @include text($H220, 400, $N0);
+    margin-bottom: 10px;
+  }
+  &__center {
+    @include flex-col(center, center);
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  &__link {
+    font-family: inherit;
+    @include text($H50, 700, #ffc34e);
+    margin-bottom: 10px;
+    @include transition;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: darken($color: #ffc34e, $amount: 10%);
+      text-decoration: none;
+    }
   }
 }
