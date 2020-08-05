@@ -1,5 +1,6 @@
 .first-screen {
   padding-bottom: 96px;
+  padding-top: 80px;
   background: linear-gradient(
       0deg,
       rgba(15, 18, 43, 0.71),
@@ -29,6 +30,10 @@
       ),
       url("../img/bg.jpg") no-repeat center center;
     background-size: cover;
+  }
+  &__logo-link {
+    display: inline-block;
+    margin-bottom: 30px;
   }
   &__title-wrapper {
     position: relative;
@@ -66,7 +71,7 @@
     text-shadow: 6px 4px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 2px;
     &._mb {
-      margin-bottom: 45px;
+      margin-bottom: 70px;
     }
     @include media($screen-tablet) {
       font-size: 38px;

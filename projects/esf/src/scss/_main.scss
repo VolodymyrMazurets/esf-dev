@@ -93,6 +93,10 @@
     position: absolute;
     bottom: -40px;
     z-index: 0;
+    width: 50%;
+    @include media($screen-tablet) {
+      width: initial;
+    }
     &._left {
       left: 0;
       bottom: -28px;

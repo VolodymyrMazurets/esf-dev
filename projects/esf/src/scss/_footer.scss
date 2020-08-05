@@ -4,7 +4,7 @@
   overflow: hidden;
   &__camels {
     position: absolute;
-    left: 0;
+    left: -159px;
     right: 0;
     bottom: 0;
     min-width: 245%;
@@ -13,6 +13,7 @@
     width: 100%;
     @include media($screen-tablet-large) {
       min-width: initial;
+      left: 0;
     }
   }
   &__gradient {
