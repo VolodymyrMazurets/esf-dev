@@ -19,7 +19,7 @@
     line-height: 21px;
   }
   &__body {
-    padding: 70px 0 0;
+    padding: 0 0 0;
     text-align: center;
     background: linear-gradient(
         357.92deg,
@@ -29,6 +29,9 @@
       ),
       url("../img/milkyway\ 1.png") no-repeat center center;
     background-size: cover;
+    @include media($screen-tablet) {
+      padding: 70px 0 0;
+    }
   }
   &__first-video {
     @include flex-row(center);
@@ -80,6 +83,7 @@
   &__footer {
     position: relative;
     padding-bottom: 140px;
+    border-bottom: 4px solid #2d3469;
   }
   &__btn {
     margin: auto;
@@ -92,6 +96,7 @@
     z-index: 0;
     &._left {
       left: 0;
+      bottom: -28px;
     }
     &._right {
       right: 0;
