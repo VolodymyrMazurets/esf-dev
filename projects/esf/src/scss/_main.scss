@@ -71,7 +71,6 @@
     flex: 1 1;
     flex-basis: 100%;
     @include media($screen-tablet) {
-      max-height: 134px;
       flex-basis: initial;
     }
     img {

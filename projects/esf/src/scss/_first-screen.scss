@@ -1,5 +1,4 @@
 .first-screen {
-  min-height: 75vh;
   padding-bottom: 96px;
   background: linear-gradient(
       0deg,
@@ -15,7 +14,8 @@
     url("../img/bg.jpg") no-repeat center center;
   background-size: cover;
   background-position: 43% 10%;
-  @include media($screen-tablet) {
+  @include media($screen-tablet-large) {
+    min-height: 90vh;
     background: linear-gradient(
         0deg,
         rgba(15, 18, 43, 0.71),
@@ -46,7 +46,7 @@
     }
   }
   &__title {
-    font-size: 48px;
+    font-size: 38px;
     line-height: 50px;
     margin-bottom: 60px;
     text-transform: uppercase;
@@ -54,6 +54,9 @@
     font-weight: 700;
     position: relative;
     z-index: 100;
+    @include media($screen-tablet-large) {
+      font-size: 48px;
+    }
   }
   &__subtitle {
     font-family: $subtitle-font;
@@ -66,6 +69,9 @@
       margin-bottom: 45px;
     }
     @include media($screen-tablet) {
+      font-size: 38px;
+    }
+    @include media($screen-tablet-large) {
       font-size: 48px;
     }
   }
