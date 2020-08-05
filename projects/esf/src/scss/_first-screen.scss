@@ -30,6 +30,21 @@
       url("../img/bg.jpg") no-repeat center center;
     background-size: cover;
   }
+  &__title-wrapper {
+    position: relative;
+    img {
+      position: absolute;
+      width: 177px;
+      height: 136px;
+      right: 132px;
+      top: -56px;
+      z-index: 0;
+      display: none;
+      @include media($screen-tablet) {
+        display: initial;
+      }
+    }
+  }
   &__title {
     font-size: 48px;
     line-height: 50px;
@@ -37,6 +52,8 @@
     text-transform: uppercase;
     font-family: $title-font;
     font-weight: 700;
+    position: relative;
+    z-index: 100;
   }
   &__subtitle {
     font-family: $subtitle-font;
