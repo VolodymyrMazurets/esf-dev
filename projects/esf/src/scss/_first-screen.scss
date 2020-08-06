@@ -60,6 +60,14 @@
     position: relative;
     z-index: 100;
     text-align: center;
+    span {
+      display: block;
+    }
+    @include media($screen-tablet) {
+      span {
+        display: inline;
+      }
+    }
     @include media($screen-tablet-large) {
       font-size: 48px;
     }

@@ -94,7 +94,7 @@
     bottom: -40px;
     z-index: 0;
     width: 50%;
-    @include media($screen-tablet) {
+    @include media($screen-tablet-large) {
       width: initial;
     }
     &._left {
