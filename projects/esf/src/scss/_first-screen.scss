@@ -59,6 +59,7 @@
     font-weight: 700;
     position: relative;
     z-index: 100;
+    text-align: center;
     @include media($screen-tablet-large) {
       font-size: 48px;
     }

@@ -4,16 +4,16 @@
   overflow: hidden;
   &__camels {
     position: absolute;
-    left: -159px;
+    // left: -159px;
     right: 0;
     bottom: 0;
-    min-width: 245%;
+    min-width: 200%;
     z-index: 0;
     pointer-events: none;
     width: 100%;
-    @include media($screen-tablet-large) {
-      min-width: initial;
-      left: 0;
+    @include media($screen-tablet) {
+      min-width: 100%;
+      left: 0;      
     }
   }
   &__gradient {
@@ -42,15 +42,19 @@
   &__btn {
     position: relative;
     z-index: 100;
+    margin-bottom: 16px;
   }
   &__right {
-    padding: 80px 0 61px;
-    @include flex-col(flex-start, flex-end);
+    padding: 0 0 61px;
+    @include flex-row(space-between);
+    flex-wrap: wrap;
     width: 100%;
     position: relative;
     z-index: 100;
+    margin-bottom: 100px;
     @include media($screen-tablet-large) {
-      padding: 150px 0 61px;
+      padding: 0 0 61px;
+      margin-bottom: 0;
     }
   }
   &__wrapper {
@@ -61,9 +65,14 @@
     }
   }
   &__help {
+    padding-top: 300px;
     font-family: $title-font;
     @include text($H220, 400, $N0);
     margin-bottom: 10px;
+    display: none;
+    @include media($screen-tablet-large) {
+      display: block;
+    }
   }
   &__center {
     @include flex-col(center, center);
