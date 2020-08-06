@@ -1,6 +1,5 @@
 .first-screen {
-  padding-bottom: 96px;
-  padding-top: 80px;
+  padding-bottom: 50px;
   background: linear-gradient(
       0deg,
       rgba(15, 18, 43, 0.71),
@@ -12,10 +11,28 @@
       rgba(255, 138, 0, 0.2) 50.08%,
       rgba(254, 226, 3, 0.2) 81.6%
     ),
-    url("../img/bg.jpg") no-repeat center center;
+    url("../img/mobile.jpg") no-repeat center center;
   background-size: cover;
   background-position: 43% 10%;
+
+  @include media($screen-tablet) {
+    background: linear-gradient(
+        0deg,
+        rgba(15, 18, 43, 0.71),
+        rgba(15, 18, 43, 0.71)
+      ),
+      linear-gradient(
+        130.97deg,
+        rgba(131, 55, 255, 0.2) 15.7%,
+        rgba(255, 138, 0, 0.2) 50.08%,
+        rgba(254, 226, 3, 0.2) 81.6%
+      ),
+      url("../img/tab.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
   @include media($screen-tablet-large) {
+    padding-top: 80px;
     min-height: 90vh;
     background: linear-gradient(
         0deg,
@@ -28,7 +45,7 @@
         rgba(255, 138, 0, 0.2) 50.08%,
         rgba(254, 226, 3, 0.2) 81.6%
       ),
-      url("../img/bg.jpg") no-repeat center center;
+      url("../img/desktop.jpg") no-repeat center center;
     background-size: cover;
   }
   &__logo-link {
